@@ -14,7 +14,7 @@
   </div>
 
   <div *ngIf='quote.showDetails'>
-    <app-goal-detail  [quote]='quote' (isDelete
+    <app-goal-detail  [quote]='quote'  (isDelete) = 'deleteQuote($event,i)'></app-goal-detail>
   </div>
 
 
