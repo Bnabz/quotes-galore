@@ -17,7 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
-import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
