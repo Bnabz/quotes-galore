@@ -8,14 +8,14 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote('Brian','Brian','quote1'new Date()),
-    new Quote ('Brian','Brian','quote2'new Date()),
-    new Quote('Brian','Brian','quote3'new Date()),
+    new Quote('Brian','Brian','quote1',new Date()),
+    new Quote ('Brian','Brian','quote2',new Date()),
+    new Quote('Brian','Brian','quote3',new Date()),
 
   ];
 
   toggleDetails(index){
-     this.quotes[index].showDescription = !this.quotes[index].showDescription;
+     this.quotes[index].showQuotation = !this.quotes[index].showQuotation;
    }
 
   deleteQuote(isComplete, index){
