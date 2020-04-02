@@ -39,7 +39,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatTooltipModule,
     FormsModule,
-    DiaryFormComponent,
     ReactiveFormsModule,
   ],
   providers: [],
