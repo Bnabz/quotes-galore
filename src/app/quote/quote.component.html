@@ -7,14 +7,14 @@
   </div>
 
   <div class="row">
-    <div *ngFor='let goal of goals;let i = index'>
+    <div *ngFor='let quote of quotes;let i = index'>
   <div>
     <h4 id={{i}} appStrikethrough>{{quote.quotation}}</h4>
     <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
   </div>
 
   <div *ngIf='quote.showDetails'>
-    <app-goal-detail  [quote]='quote'  (isDelete) = 'deleteQuote($event,i)'></app-goal-detail>
+    <app-quote-detail-component  [quote]='quote'  (isDelete) = 'deleteQuote($event,i)'></app-quote-detail-component>
   </div>
 
 
