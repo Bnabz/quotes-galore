@@ -3,18 +3,18 @@
   <hr>
 
   <div class="row">
-     <app-quote-form (addGoal)="addNewGoal($event)"></app-quote-form>
+     <app-quote-form (addGoal)="addNewQuote($event)"></app-quote-form>
   </div>
 
   <div class="row">
     <div *ngFor='let goal of goals;let i = index'>
   <div>
-    <h4 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h4>
+    <h4 id={{i}} appStrikethrough>{{quote.quotation}}</h4>
     <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
   </div>
 
-  <div *ngIf='goal.showDescription'>
-    <app-goal-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
+  <div *ngIf='quote.showDescription'>
+    <app-goal-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-goal-detail>
   </div>
 </div>
   </div>
