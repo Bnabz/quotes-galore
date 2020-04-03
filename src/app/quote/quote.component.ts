@@ -8,9 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote('Brian','George Carlin','"Think of how stupid the average person is, then realize half of them are stupider than that."', 5,new Date('2020-03-25')),
-    new Quote ('Stacy','Carl Sagan',"\"We're made of star stuff.We are a way for the universe to know itself.\"" ,8,new Date('2020-04-01')),
-    new Quote('Laureen','Marcus Aurelius',"\"Choose not to be harmed,and you wont feel harmed.Don't feel harmed,and you have not been harmed\"",3,new Date('2020-03-20')),
+    new Quote('Brian','George Carlin','"Think of how stupid the average person is, then realize half of them are stupider than that."', 5,5,new Date('2020-03-25')),
+    new Quote ('Stacy','Carl Sagan',"\"We're made of star stuff.We are a way for the universe to know itself.\"" ,8,2,new Date('2020-04-01')),
+    new Quote('Laureen','Marcus Aurelius',"\"Choose not to be harmed,and you wont feel harmed.Don't feel harmed,and you have not been harmed\"",3,1,new Date('2020-03-20')),
 
   ];
   most:number = 0;
@@ -30,8 +30,24 @@ export class QuoteComponent implements OnInit {
                       console.log(this.quotes[i])
                   this.quotes[i].popularQuote = true
               }
+              else{
+                this.quotes[i].popularQuote = false
+              }
         }
     }
+
+    upVote(i){
+
+      this.quotes[i].likes = this.quotes[i].likes +1
+      this.findMostPopular()
+    }
+
+    downVote(i){
+
+      this.quotes[i].dislikes = this.quotes[i].dislikes +1
+      this.findMostPopular()
+    }
+
 
 
 
@@ -64,7 +80,7 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+console.log(this.quotes[0].dislikes)
     this.findMostPopular()
 }
 
