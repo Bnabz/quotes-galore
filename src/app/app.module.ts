@@ -19,6 +19,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
+import { DayCountPipe } from './day-count.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HighlightDirective } from './highlight.directive';
     QuoteComponent,
     QuoteDetailComponentComponent,
     QuoteFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DayCountPipe
   ],
   imports: [
     BrowserModule,
