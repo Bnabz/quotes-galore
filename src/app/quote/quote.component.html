@@ -6,17 +6,10 @@
      <app-quote-form (addGoal)="addNewQuote($event)"></app-quote-form>
   </div>
 
-  <div class="row">
-    <div *ngFor='let quote of quotes;let i = index'>
-  <div>
-    <h4 id={{i}} appStrikethrough>{{quote.quotation}}</h4>
+  <mat-card *ngFor='let quote of quotes;let i = index'>
+    <mat-card-title >{{quote.quotation}}</mat-card-title>
     <button (click)='toggleDetails(i)' class="btn btn-primary">See Details</button>
-  </div>
-
   <div *ngIf='quote.showDetails'>
     <app-quote-detail-component  [quote]='quote'  (isDelete) = 'deleteQuote($event,i)'></app-quote-detail-component>
   </div>
-
-
-
-</div>
+</mat-card>
