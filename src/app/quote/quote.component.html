@@ -7,7 +7,13 @@
   </div>
 
   <mat-card *ngFor='let quote of quotes;let i = index'>
-    <mat-card-title >{{quote.quotation}}</mat-card-title>
+
+    <mat-card-title *ngIf ='quote.popularQuote; else elseBlock'appHighlight >{{quote.quotation}}</mat-card-title>
+
+
+   <ng-template #elseBlock> <mat-card-title  >{{quote.quotation}}</mat-card-title></ng-template>
+
+
     <button (click)='toggleDetails(i)' class="btn btn-primary">See Details</button>
   <div *ngIf='quote.showDetails'>
     <app-quote-detail-component  [quote]='quote' ></app-quote-detail-component>
@@ -18,3 +24,4 @@
     <button md-icon-button mdTooltip="Not for me"><mat-icon>thumb_down</mat-icon></button>
   </mat-card-actions>
 </mat-card>
+</div>
