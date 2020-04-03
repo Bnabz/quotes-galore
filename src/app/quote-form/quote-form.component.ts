@@ -9,7 +9,7 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
 })
 export class QuoteFormComponent implements OnInit {
 
-  newQuote = new Quote("","",new Date());
+  newQuote = new Quote("","","",null,null,new Date());
   @Output() addQuote = new EventEmitter<Quote>();
 
   quoteForm = new FormGroup({

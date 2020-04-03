@@ -1,1 +1,30 @@
+<mat-card >
+  <form (ngSubmit)="onSubmit()"[formGroup]="quoteForm" >
+    <mat-card-title>New Quotation</mat-card-title>
+    <mat-card-content class = "container">
 
+      <div class = "row">
+        <mat-form-field style="width: 400px;">
+          <input matInput placeholder="Your name" formControlName= "username"[(ngModel)]="newQuote.username"  >
+        </mat-form-field>
+      </div>
+
+
+      <div class = "row" >
+        <mat-form-field style="width: 400px;">
+          <input matInput placeholder="Quote" formControlName= "quotation" [(ngModel)]="newQuote.quotation" >
+        </mat-form-field>
+      </div>
+
+      <div class = "row">
+        <mat-form-field style="width: 600px;">
+          <textarea matInput  rows="10" cols="100"
+             placeholder="Author" formControlName= "content"[(ngModel)]="newQuote.author" >
+          </textarea>
+
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+      <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+</mat-card>
