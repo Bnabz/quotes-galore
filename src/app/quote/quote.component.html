@@ -5,7 +5,7 @@
   <div class="row">
      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-
+  <div class="row">
     <mat-card *ngFor='let quote of quotes;let i = index'>
        <mat-card-title *ngIf ='quote.popularQuote; else notPopular'appHighlight >{{quote.quotation}}</mat-card-title>
        <ng-template #notPopular> <mat-card-title  >{{quote.quotation}}</mat-card-title></ng-template>
@@ -20,7 +20,7 @@
             <app-quote-detail-component [quote]='quote' ></app-quote-detail-component>
           </mat-card-content>
       </div>
-      
+
       <mat-card-actions>
         <button mat-icon-button mdTooltip="Remove entry" (click)='deleteQuote(true,i)'><mat-icon>delete</mat-icon></button>
         <button md-icon-button mdTooltip="Awesome!" (click)='upVote(i)'>{{quote.likes.toString()}}<mat-icon>thumb_up</mat-icon></button>
@@ -28,4 +28,5 @@
         <hr>
       </mat-card-actions>
     </mat-card>
+    </div>
 </div>
