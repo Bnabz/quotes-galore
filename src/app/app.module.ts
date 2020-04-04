@@ -43,7 +43,7 @@ import { DayCountPipe } from './day-count.pipe';
     MatFormFieldModule,
     MatTooltipModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

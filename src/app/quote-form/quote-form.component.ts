@@ -14,8 +14,8 @@ export class QuoteFormComponent implements OnInit {
 
   quoteForm = new FormGroup({
     username: new FormControl("",Validators.required),
-    author: new FormControl("",Validators.required),
-    quotation: new FormControl("",Validators.required)
+    quotation: new FormControl("",Validators.required),
+      author: new FormControl("",Validators.required),
 
   });
 
@@ -23,6 +23,10 @@ export class QuoteFormComponent implements OnInit {
      this.addQuote.emit(this.newQuote);
    }
 
+
+   submitQuote(){
+      this.addQuote.emit(this.newQuote);
+    }
   constructor() { }
 
   ngOnInit(): void {
