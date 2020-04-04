@@ -9,23 +9,19 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
 })
 export class QuoteFormComponent implements OnInit {
 
-  newQuote = new Quote("","","",null,null,new Date());
+  newQuote = new Quote("","","",0,0,new Date());
   @Output() addQuote = new EventEmitter<Quote>();
 
   quoteForm = new FormGroup({
     username: new FormControl("",Validators.required),
-    quotation: new FormControl("",Validators.required),
-      author: new FormControl("",Validators.required),
+    author: new FormControl("",Validators.required),
+    quotation: new FormControl("",Validators.required)
 
   });
 
-   submitQuote(){
-     this.addQuote.emit(this.newQuote);
-   }
-
-
-   submitQuote(){
+   onSubmit(){
       this.addQuote.emit(this.newQuote);
+      console.log(this.newQuote)
     }
   constructor() { }
 

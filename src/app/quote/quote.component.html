@@ -1,22 +1,38 @@
-
+<div class="container-fluid">
   <h1>The Quote Collection</h1>
   <hr>
-  <app-quote-form><app-quote-form>
+
   <div class="row">
-     <app-quote-form (addGoal)="addNewQuote($event)"></app-quote-form>
+     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
 
   <mat-card *ngFor='let quote of quotes;let i = index'>
 
-    <mat-card-title *ngIf ='quote.popularQuote; else elseBlock'appHighlight >{{quote.quotation}}</mat-card-title>
+    <mat-card-title *ngIf ='quote.popularQuote; else notPopular'appHighlight >{{quote.quotation}}</mat-card-title>
 
 
-   <ng-template #elseBlock> <mat-card-title  >{{quote.quotation}}</mat-card-title></ng-template>
+   <ng-template #notPopular> <mat-card-title  >{{quote.quotation}}</mat-card-title></ng-template>
 
 
     <button (click)='toggleDetails(i)' class="btn btn-primary">See Details</button>
-  <div *ngIf='quote.showDetails'>
-    <app-quote-detail-component  [quote]='quote' ></app-quote-detail-component>
+  <div class  *ngIf='quote.showDetails'>
+
+    <!-- < div *ngIf='quote.today'>
+      <p>{{quote.author}}</p>
+      <p>This quote was submitted today</p>
+    </div>
+
+   < div *ngIf='!quote.today'>
+      <app-quote-detail-component [quote]='quote' ></app-quote-detail-component>
+    </div>-->
+    <mat-card-content *ngIf='quote.today'>
+      <p>{{quote.author}}</p>
+      <p>This quote was submitted today</p>
+      </mat-card-content>
+     <mat-card-content *ngIf='!quote.today'>
+        <app-quote-detail-component [quote]='quote' ></app-quote-detail-component>
+        </mat-card-content>
+
   </div>
   <mat-card-actions>
     <button mat-icon-button mdTooltip="Remove entry" (click)='deleteQuote(true,i)'><mat-icon>delete</mat-icon></button>
@@ -25,3 +41,4 @@
     <hr>
   </mat-card-actions>
 </mat-card>
+</div>

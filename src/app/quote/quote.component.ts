@@ -36,6 +36,8 @@ export class QuoteComponent implements OnInit {
         }
     }
 
+
+
     upVote(i){
 
       this.quotes[i].likes = this.quotes[i].likes +1
@@ -48,10 +50,20 @@ export class QuoteComponent implements OnInit {
       this.findMostPopular()
     }
 
+    todayCheck(){
+      for (let i = 0; i < this.quotes.length; i++) {
+        let s= this.quotes[i].submitDate
+        let n= new Date()
+          if(s.getDay()===n.getDay()){
+            this.quotes[i].today=true;
+          }
+      }
+    }
 
 
 
   toggleDetails(index){
+    console.log(this.quotes[1].today)
      this.quotes[index].showDetails = !this.quotes[index].showDetails;
    }
 
@@ -69,6 +81,7 @@ export class QuoteComponent implements OnInit {
    quote.id = quoteLength+1;
    quote.submitDate = new Date()
    this.quotes.push(quote)
+   this.todayCheck()
 
  }
 
@@ -80,8 +93,8 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-console.log(this.quotes[0].dislikes)
     this.findMostPopular()
+    this.todayCheck()
 }
 
 
