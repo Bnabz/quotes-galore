@@ -15,8 +15,6 @@ export class QuoteComponent implements OnInit {
   ];
   most:number = 0;
 
-
-
     findMostPopular() {
 
       for (let i = 0; i < this.quotes.length; i++) {
@@ -25,15 +23,15 @@ export class QuoteComponent implements OnInit {
           }
       }
 
-       for (let i = 0; i < this.quotes.length; i++) {
-              if(this.quotes[i].likes===this.most){
-                      console.log(this.quotes[i])
-                  this.quotes[i].popularQuote = true
-              }
-              else{
-                this.quotes[i].popularQuote = false
-              }
-        }
+     for (let i = 0; i < this.quotes.length; i++) {
+            if(this.quotes[i].likes===this.most){
+                    console.log(this.quotes[i])
+                this.quotes[i].popularQuote = true
+            }
+            else{
+              this.quotes[i].popularQuote = false
+            }
+      }
     }
 
 
@@ -86,17 +84,11 @@ export class QuoteComponent implements OnInit {
  }
 
 
-
-
-
-
   constructor() { }
 
   ngOnInit(): void {
     this.findMostPopular()
     this.todayCheck()
-}
-
-
+  }
 
 }
