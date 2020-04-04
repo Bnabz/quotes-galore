@@ -20,8 +20,10 @@ export class QuoteFormComponent implements OnInit {
   });
 
    onSubmit(){
+      if(this.quoteForm.valid){
       this.addQuote.emit(this.newQuote);
       console.log(this.newQuote)
+     }
     }
   constructor() { }
 

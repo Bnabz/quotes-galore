@@ -9,7 +9,7 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
     new Quote('Brian','George Carlin','"Think of how stupid the average person is, then realize half of them are stupider than that."', 5,5,new Date('2020-03-25')),
-    new Quote ('Stacy','Carl Sagan',"\"We're made of star stuff.We are a way for the universe to know itself.\"" ,8,2,new Date('2020-04-01')),
+
     new Quote('Laureen','Marcus Aurelius',"\"Choose not to be harmed,and you wont feel harmed.Don't feel harmed,and you have not been harmed\"",3,1,new Date('2020-03-20')),
 
   ];
