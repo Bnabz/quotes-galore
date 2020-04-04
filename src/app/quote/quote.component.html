@@ -10,7 +10,7 @@
      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
   <div class="row">
-    <mat-card *ngFor='let quote of quotes;let i = index'>
+    <mat-card *ngFor='let quote of quotes;let i = index'style="width:100%">
        <mat-card-title *ngIf ='quote.popularQuote; else notPopular'appHighlight >{{quote.quotation}}</mat-card-title>
        <ng-template #notPopular> <mat-card-title  >{{quote.quotation}}</mat-card-title></ng-template>
         <button (click)='toggleDetails(i)' class="btn btn-primary">See Details</button>

@@ -1,28 +1,47 @@
-# Quotes
+# Quotes Galore
+#### Version 1.0, 4/4/2020
+#### By Brian Nabiswa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+## Description
+This project creates a quote generation web application. It has an input form where the user types in a quote of their choice, which is then appended to a list of quotes on submission.
+## Features
+1.A form into which the user can input their name,a quote and the quote's author..
 
-## Development server
+2.Form validation.In case any input field is not filled, a red highlight appears on the empty field.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+3.A day counter that displays the number of days since the quote was submitted.
 
-## Code scaffolding
+4.Like and dislike buttons that can be clicked to upvote or downvote quotes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+5.A custom directive highlights the most popular quote red.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Setup/Installation Requirements
+1.Clone this repository or download a ZIP file of the code.
 
-## Running unit tests
+2.The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3.Open the index.html file to view the application on your preferred web browser.
 
-## Running end-to-end tests
+To view the site, open the Github Pages link provided below:
+## Link to web page.
+https://bnabz.github.io/quotes/
+## Technologies Used
+Angular 8
+Typescript
+CSS
+Bootstrap
+Angular material
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Support and contact details
+In case of any questions, feel free to contact me at my email address: brnabiswa@gmail.com
+### License
+MIT licence
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# quotes
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Copyright (c) 2020 Brian Nabiswa
